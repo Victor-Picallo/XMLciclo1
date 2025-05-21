@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE lista_persona SYSTEM "ejercicio.dtd">
+<lista_persona>
+    <persona>
+        <nombre>Antonio Moreno</nombre>
+        <fecha_nacimiento>27-11-2008</fecha_nacimiento>
+        <sexo>Varon</sexo>
+    </persona>
+</lista_persona>

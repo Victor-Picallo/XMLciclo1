@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raiz empresa -->
+    <xs:element name="empresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="empleado" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute ref="nombreEmpresa" type="xs:int" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Atributo nombreEmpresa -->
+    <xs:attribute name="nombreEmpresa">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+                <xs:maxLength value="2"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- Elemento empleado -->
+    <xs:element name="empleado">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre"/>
+                <xs:element ref="apellido"/>
+                <xs:element ref="fechaNacimiento"/>
+                <xs:element ref="salario"/>
+                <xs:element ref="activo"/>
+                <xs:element ref="horaEntrada"/>
+            </xs:sequence>
+            <xs:attribute ref="id" type="xs:ID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Atributo id -->
+    <xs:attribute name="id" type="xs:ID"/>
+
+    <!-- Elemento nombre -->
+    <xs:element name="nombre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="20"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Elemento apellido -->
+    <xs:element name="apellido">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Elemento fechaNacimiento -->
+    <xs:element name="fechaNacimiento" type="xs:date"/>
+
+    <!-- Elemento salario -->
+    <xs:element name="salario">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Elemento activo -->
+    <xs:element name="activo" type="xs:boolean"/>
+
+    <!-- Elemento horaEntrada -->
+    <xs:element name="horaEntrada" type="xs:time"/>
+</xs:schema>

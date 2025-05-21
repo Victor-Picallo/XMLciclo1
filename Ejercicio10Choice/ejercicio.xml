@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<noticia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ejercicio.xsd">
+    <titulo>Ha fallecido Jose Angel de la Casa</titulo>
+    <parrafo>Narrador de Encuentros de Futbol</parrafo>
+    <grafico>Foto 1</grafico>
+    <parrafo>Recordamos el ultimo gol de Señor en el encuentro España contra Malta</parrafo>
+    <grafico>Foto 2 22 Diciembre 1983</grafico>
+</noticia>

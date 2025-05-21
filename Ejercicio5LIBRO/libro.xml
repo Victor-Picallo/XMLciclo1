@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="libro.xsd">
+    <libro id="1001">
+        <titulo>El principito</titulo>
+        <autor>Antoine de Saint-Exupery</autor>
+    </libro>
+
+    <libro id="1002">
+        <titulo>Cien años de soledad</titulo>
+        <autor>Gabriel Garcia Marquez</autor>
+    </libro>
+
+    <libro id="1003">
+        <titulo>El amor en los tiempos del cólera</titulo>
+        <autor>Gabriel Garcia Marquez</autor>
+    </libro>
+
+    <prestamo libro="1001">
+        <fecha>2025-01-05</fecha>
+    </prestamo>
+
+    <prestamo libro="1002">
+        <fecha>2025-01-10</fecha>
+    </prestamo>
+
+    <prestamo libro="1003">
+        <fecha>2025-01-15</fecha>
+    </prestamo>
+</catalogo>

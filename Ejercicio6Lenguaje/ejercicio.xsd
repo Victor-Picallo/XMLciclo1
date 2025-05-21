@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Programacion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Lenguaje" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Lenguaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Nombre"/>
+                <xs:element ref="Creador"/>
+                <xs:element ref="AnioCreacion"/>
+                <xs:element ref="Descripcion"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Nombre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Python"/>
+                <xs:enumeration value="Java"/>
+                <xs:enumeration value="C++"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Creador" type="xs:string"/>
+
+    <xs:element name="AnioCreacion">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1950"/>
+                <xs:maxInclusive value="2025"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Descripcion">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="255"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+</xs:schema>

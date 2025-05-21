@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<receta>
+    <titulo>Pollo al Ajillo</titulo>
+    <ingredientes>Pechugas de pollo</ingredientes>
+    <ingredientes>Ajo</ingredientes>
+    <ingredientes>Pimienta</ingredientes>
+    <ingredientes>Sal</ingredientes>
+    <procedimiento>Sellamos el pollo</procedimiento>
+    <procedimiento>Sofreimos el ajo</procedimiento>
+    <procedimiento>Condimentamos con sal y pimienta</procedimiento>
+    <procedimiento>Anadimos el pollo</procedimiento>
+</receta>

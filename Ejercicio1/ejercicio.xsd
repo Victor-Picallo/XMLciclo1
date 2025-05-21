@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Elemento Raiz -->
+    <xs:element name="libreria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="libro" maxOccurs="2"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento libro -->
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titulo"/>
+                <xs:element ref="autor"/>
+                <xs:element ref="anio"/>
+                <xs:element ref="genero"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento titulo -->
+    <xs:element name="titulo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Elemento autor -->
+    <xs:element name="autor">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Elemento anio -->
+    <xs:element name="anio">
+        <xs:simpleType>
+            <xs:restriction base="xs:int">
+                <xs:totalDigits value="4"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Elemento genero -->
+    <xs:element name="genero">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Ficcion"/>
+                <xs:enumeration value="Distopia"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,34 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ejemplo.org/direccion"
+           xmlns="http://ejemplo.org/direccion"
+           elementFormDefault="qualified">
+
+    <xs:element name="direccion" type="tipoDireccion"/>
+
+    <xs:complexType name="tipoDireccion">
+        <xs:sequence>
+            <xs:element name="calle" type="tipoCalle"/>
+            <xs:element name="ciudad" type="tipoCiudad"/>
+            <xs:element name="codigoPostal" type="tipoCodigoPostal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoCalle">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoCiudad">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoCodigoPostal">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="10000"/>
+            <xs:maxInclusive value="99999"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

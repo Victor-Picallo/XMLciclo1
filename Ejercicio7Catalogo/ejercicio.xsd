@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raiz -->
+    <xs:element name="catalogo" type="tipoCatalogo"/>
+
+    <!-- Definicion del tipo -->
+    <xs:complexType name="tipoCatalogo">
+        <xs:sequence>
+            <xs:element name="book" type="tipoLibro" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definicion del tipo libro -->
+    <xs:complexType name="tipoLibro">
+        <xs:sequence>
+            <xs:element name="title" type="tipoTitulo"/>
+            <xs:element name="author" type="tipoAutor"/>
+            <xs:element name="year" type="tipoAno"/>
+            <xs:element name="publisher" type="tipoPublicador"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definicion tipo titulo -->
+    <xs:simpleType name="tipoTitulo">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definicion tipo autor -->
+    <xs:simpleType name="tipoAutor">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definicion tipo ano -->
+    <xs:simpleType name="tipoAno">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1960"/>
+            <xs:maxInclusive value="2040"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definicion tipo publicador -->
+    <xs:simpleType name="tipoPublicador">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Prentice Hall"/>
+            <xs:enumeration value="MIT Press"/>
+            <xs:enumeration value="Addison-Wesley"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
