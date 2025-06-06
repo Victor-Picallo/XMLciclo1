@@ -27,8 +27,8 @@
 
     <xs:simpleType name="tipoNacionalidad">
         <xs:restriction base="xs:string">
-            <xs:enum value="España"/>
-            <xs:enum value="Colombia"/>
+            <xs:enumeration value="España"/>
+            <xs:enumeration value="Colombia"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
