@@ -32,7 +32,7 @@
     <xs:simpleType name="tipoGenero">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Novela"/>
-            <xs:enumeration value="Realismo Magico"/>
+            <xs:enumeration value="Realismo magico"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
