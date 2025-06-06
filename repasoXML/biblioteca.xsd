@@ -1,8 +1,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://ejemplo.org/biblioteca"
+           targetNamespace="http://ejemplo.org/biblioteca"
            xmlns="http://ejemplo.org/biblioteca"
            xmlns:lib="http://ejemplo.org/libro"
-           xmlns:aut="http://ejemplo.org/autor"
            elementFormDefault="qualified">
 
     <xs:import namespace="http://ejemplo.org/libro" schemaLocation="libro.xsd"/>
