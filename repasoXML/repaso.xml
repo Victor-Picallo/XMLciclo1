@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns="http://ejemplo.org/biblioteca"
+            xmlns:lib="http://ejemplo.org/libro"
+            xmlns:aut="http://ejemplo.org/autor"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://ejemplo.org/biblioteca biblioteca.xsd
+                               http://ejemplo.org/libro libro.xsd
+                               http://ejemplo.org/autor autor.xsd">
+    <nombre>Biblioteca Central</nombre>
+    <ubicacion>Plaza Mayor 15</ubicacion>
+    <lib:libro>
+        <lib:titulo>El Quijote</lib:titulo>
+        <lib:isbn>978-84-376-0494-7</lib:isbn>
+        <lib:genero>Novela</lib:genero>
+        <aut:autor>
+            <aut:nombre>Miguel</aut:nombre>
+            <aut:apellido>Cervantes</aut:apellido>
+            <aut:nacionalidad>España</aut:nacionalidad>
+        </aut:autor>
+    </lib:libro>
+    <lib:libro>
+        <lib:titulo>Cien años de soledad</lib:titulo>
+        <lib:isbn>978-84-376-0495-4</lib:isbn>
+        <lib:genero>Realismo magico</lib:genero>
+        <aut:autor>
+            <aut:nombre>Gabriel</aut:nombre>
+            <aut:apellido>García Márquez</aut:apellido>
+            <aut:nacionalidad>Colombia</aut:nacionalidad>
+        </aut:autor>
+    </lib:libro>
+</biblioteca>

@@ -1,0 +1,38 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ejemplo.org/libro"
+           xmlns="http://ejemplo.org/libro"
+           xmlns:aut="http://ejemplo.org/autor"
+           elementFormDefault="qualified">
+
+    <xs:import namespace="http://ejemplo.org/autor" schemaLocation="autor.xsd"/>
+
+    <xs:element name="libro" type="tipoLibro"/>
+
+    <xs:complexType name="tipoLibro">
+        <xs:sequence>
+            <xs:element name="titulo" type="tipoTitulo"/>
+            <xs:element name="isbn" type="tipoIsbn"/>
+            <xs:element name="genero" type="tipoGenero"/>
+            <xs:element ref="aut:autor"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoTitulo">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoIsbn">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoGenero">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Novela"/>
+            <xs:enumeration value="Realismo Magico"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

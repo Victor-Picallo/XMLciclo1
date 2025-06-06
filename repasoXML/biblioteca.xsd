@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://ejemplo.org/biblioteca"
+           xmlns="http://ejemplo.org/biblioteca"
+           xmlns:lib="http://ejemplo.org/libro"
+           xmlns:aut="http://ejemplo.org/autor"
+           elementFormDefault="qualified">
+
+    <xs:import namespace="http://ejemplo.org/libro" schemaLocation="libro.xsd"/>
+    <xs:import namespace="http://ejemplo.org/autor" schemaLocation="autor.xsd"/>
+
+    <xs:element name="biblioteca" type="TipoBiblioteca"/>
+
+    <xs:complexType name="TipoBiblioteca">
+        <xs:sequence>
+            <xs:element name="nombre" type="tipoNombre"/>
+            <xs:element name="ubicacion" type="tipoUbicacion"/>
+            <xs:element ref="lib:libro" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoNombre">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoUbicacion">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

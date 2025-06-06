@@ -1,0 +1,34 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ejemplo.org/autor"
+           xmlns="http://ejemplo.org/autor"
+           elementFormDefault="qualified">
+
+    <xs:element name="autor" type="tipoAutor"/>
+
+    <xs:complexType name="tipoAutor">
+        <xs:sequence>
+            <xs:element name="nombre" type="tipoNombre"/>
+            <xs:element name="apellido" type="tipoApellido"/>
+            <xs:element name="nacionalidad" type="tipoNacionalidad"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoNombre">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoApellido">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoNacionalidad">
+        <xs:restriction base="xs:string">
+            <xs:enum value="España"/>
+            <xs:enum value="Colombia"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
